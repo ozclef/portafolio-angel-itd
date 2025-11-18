@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portafolio Escolar – Ángel I. Téllez</title>
+    
+    <style>
+        /* Paleta y tipografía limpia */
+        :root {
+            --main-bg: #f5f8fa; /* Fondo ligero */
+            --text-color: #2c3e50; /* Texto oscuro */
+            --accent-color: #007bff; /* Azul primario amigable */
+            --card-bg: #ffffff;
+            --secondary-bg: #e9f0f5;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.4em;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        .day-card {
+            background-color: var(--secondary-bg);
+            border-left: 6px solid var(--accent-color);
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .day-card h2 {
+            margin-top: 0;
+            color: #34495e;
+            font-size: 1.6em;
+            padding-bottom: 5px;
+        }
+        .day-card h3 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-top: 20px;
+            border-bottom: 1px dotted #bdc3c7;
+            padding-bottom: 5px;
+        }
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .content-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .content-list li::before {
+            content: '✅'; /* Un ícono fácil de entender */
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+        .image-placeholder {
+            display: block;
+            width: 100%;
+            height: 150px;
+            background-color: #ecf0f1;
+            color: #95a5a6;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+            border: 2px dashed #bdc3c7;
+        }
+        .reflection {
+            background-color: #e8f7f7; /* Un color suave para la nota */
+            color: #34495e;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #c9e6e6;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .reflection p {
+            margin: 5px 0;
+        }
+
+
+      
+        /* Estilos para el contenedor de imágenes con scroll */
+        .image-gallery-scroll {
+            height: 300px; /* Altura fija para el contenedor */
+            overflow-y: scroll; /* Habilita el scroll vertical si el contenido excede la altura */
+            border: 1px solid #dcdfe4; /* Borde suave */
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9fcfe;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        .image-gallery-scroll img {
+            width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Espacio entre imágenes */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .image-gallery-scroll p.caption {
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+            margin-top: -5px; /* Ajuste para que la descripción quede pegada a la imagen */
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📂 Portafolio Escolar – Ángel I. Téllez</h1>
+            <div class="subtitle">Secundaria Técnica</div>
+            <div class="subtitle">**Periodo de Actividades: 14 al 17 de noviembre de 2025**</div>
+        </header>
+
+        <section>
+            
+            <div class="day-card">
+                <h2>📅 Jueves 14 de Noviembre - **Actividades de la Semana**</h2>
+                
+                <h3>Historia y Cultura 🌍</h3>
+                <ul class="content-list">
+                    <li>**Méxica / Teotihuacán:** 8 imágenes seleccionadas con explicación breve de cada una.</li>
+                    <li>
+                        <div class="image-placeholder">Aquí debes **reemplazar** este espacio con las 8 imágenes de Mexica/Teotihuacán.</div>
+                    </li>
+                    <li>**Mitología Griega:** La creación del mundo, con enfoque en dioses principales (Zeus, Atenea, etc.).</li>
+                    <li>**Mitología Egipcia:** Investigación sobre **Isis y Osiris** (dioses egipcios) y su papel en la religión.</li>
+                </ul>
+
+<!---------------
+**¡Importante\!** Las imágenes deben estar en la misma carpeta que tu `index.html` o en una subcarpeta (ej. `img/`) para que la ruta `src="imagen.jpg"` funcione. Si las pones en una subcarpeta, la ruta sería `src="img/nombre-de-la-imagen.jpg"`.
+
+#### **1. Para la Cultura Méxica / Tenochtitlán:**
+
+Reemplaza el `<li>` que decía "Aquí debes reemplazar..." por este código:
+
+```html---------------->
+<li>**Méxica / Tenochtitlán:** 8 imágenes seleccionadas con explicación breve de cada una.
+    <div class="image-gallery-scroll">
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Piedra+del+Sol" alt="Piedra del Sol">
+        <p class="caption">**Piedra del Sol (Calendario Azteca):** Legado famoso de la cosmovisión mexica.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Templo+Mayor" alt="Templo Mayor">
+        <p class="caption">**Templo Mayor:** Centro religioso y político de Tenochtitlán.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Codice+Mendoza" alt="Códice Mendoza">
+        <p class="caption">**Códice Mendoza:** Representa el viaje desde Aztlán a Tenochtitlán.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Guerreros+Aguila" alt="Guerreros Águila">
+        <p class="caption">**Guerreros Águila y Jaguar:** Clases guerreras de élite mexica.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Fundacion+Tenochtitlan" alt="Fundación de Tenochtitlán">
+        <p class="caption">**Fundación de Tenochtitlán:** El águila devorando la serpiente.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Tlaloc" alt="Tláloc">
+        <p class="caption">**Tláloc:** Dios de la lluvia, vital para la agricultura.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Huitzilopochtli" alt="Huitzilopochtli">
+        <p class="caption">**Huitzilopochtli:** Dios patrono de los mexicas, del sol y la guerra.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Chinampas" alt="Chinampas">
+        <p class="caption">**Chinampas de Xochimilco:** Innovador sistema agrícola.</p>
+    </div>
+    <p>&#x1F4A1; **Dato Extra de Ángel:** En la antigua Teotihuacán, la Pirámide del Sol está alineada astronómicamente con el atardecer en fechas clave, demostrando un conocimiento avanzado del calendario.</p>
+</li>
+```
+
+#### **2. Para la Mitología Griega:**
+
+```html
+<li>**Mitología Griega:** "La creación del mundo", con énfasis en los dioses principales.
+    <div class="image-gallery-scroll">
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Caos" alt="Caos">
+        <p class="caption">**Caos:** El vacío primordial, el inicio de todo en la mitología griega.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Urano+y+Gea" alt="Urano y Gea">
+        <p class="caption">**Urano (Cielo) y Gea (Tierra):** Los primeros seres divinos, padres de los Titanes.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Cronos" alt="Cronos">
+        <p class="caption">**Cronos:** El Titán que derrocó a Urano y devoró a sus hijos.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Rea+salva+a+Zeus" alt="Rea salvando a Zeus">
+        <p class="caption">**Rea:** Titanide que salvó a su hijo Zeus del destino impuesto por Cronos.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Titanomaquia" alt="Titanomaquia">
+        <p class="caption">**La Titanomaquia:** La gran guerra entre los Titanes y los Dioses Olímpicos.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Monte+Olimpo" alt="Monte Olimpo">
+        <p class="caption">**Monte Olimpo:** La majestuosa morada de los Dioses Olímpicos.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Zeus" alt="Zeus">
+        <p class="caption">**Zeus:** El rey de los dioses, dios del cielo y el trueno.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Prometeo+Fuego" alt="Prometeo robando el fuego">
+        <p class="caption">**Prometeo robando el fuego:** Entregó la llama de la civilización a la humanidad.</p>
+    </div>
+</li>
+3. Para la Mitología Egipcia:
+
+
+<li>**Mitología Egipcia:** Investigación sobre **Isis y Osiris** y su papel en la religión.
+    <div class="image-gallery-scroll">
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Isis" alt="Isis">
+        <p class="caption">**Isis:** Diosa de la magia, la maternidad y la protección.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Osiris" alt="Osiris">
+        <p class="caption">**Osiris:** Dios del inframundo, la resurrección y el primer faraón.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Set" alt="Set">
+        <p class="caption">**Set:** El dios del caos y las tormentas, asesino de Osiris.</p>
+
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Neftis" alt="Neftis">
+        <p class="caption">**Neftis:** Esposa de Set, pero leal a Isis, ayudando a buscar a Osiris.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Horus" alt="Horus">
+        <p class="caption">**Horus:** Hijo de Isis y Osiris, vengador de su padre y dios del cielo.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Momificacion" alt="Momificación Egipcia">
+        <p class="caption">**Momificación:** Proceso funerario inspirado en la resurrección de Osiris.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Anubis" alt="Anubis">
+        <p class="caption">**Anubis:** Dios con cabeza de chacal, guía en el embalsamamiento y protector de las tumbas.</p>
+        
+        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Leyenda+Isis+Osiris" alt="Leyenda de Isis y Osiris">
+        <p class="caption">**La Leyenda de Isis y Osiris:** El mito central de muerte, resurrección y la vida eterna.</p>
+    </div>
+</li>
+              
+
+                <h3>Matemáticas 🧮</h3>
+                <ul class="content-list">
+                    <li>**Cuadro Mágico de Fracciones:** Creación y llenado del cuadro.</li>
+                    <li>**Demostración:** Todas las filas, columnas y diagonales suman exactamente **3/5**.</li>
+                    <li style="font-weight: bold; color: #e74c3c;">
+                        *¡No olvides pegar el cuadrito con los números de las fracciones!*
+                    </li>
+                </ul>
+                
+                <h3>Español 📝</h3>
+                <ul class="content-list">
+                    <li>**Denotativo:** Definición de significado literal.</li>
+                    <li>**Connotativo:** Definición de sentido figurado.</li>
+                    <li>
+                        **Ejemplos:**
+                        <ul>
+                            <li>Denotativo: “La rosa es una flor roja.”</li>
+                            <li>Connotativo: “La rosa simboliza el amor y la pasión.”</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-card">
+                <h2>📅 Viernes 15 y Lunes 17 de Noviembre</h2>
+                <div class="subtitle">*(No hubo clases, registro de avances y organización personal)*</div>
+                <ul class="content-list">
+                    <li>**Organización:** Clasificación de las 35+ imágenes y transcripción de textos para el portafolio digital.</li>
+                    <li>**Repaso de Matemáticas:** Verificación de las sumas del Cuadro Mágico de fracciones.</li>
+                    <li>**Ajustes Finales:** Revisión de las definiciones de Español y diseño del portafolio.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section style="margin-top: 40px;">
+            <h2 style="color: #34495e; text-align: center; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">✨ Reflexión Personal</h2>
+            <div class="reflection">
+                <p>“Este portafolio muestra mis aprendizajes en las distintas materias y cómo apliqué la creatividad y la organización para entender mejor los temas.”</p>
+                <p style="font-style: italic;">“Aunque algunos días no hubo clases, aproveché el tiempo para repasar y organizar mi material de estudio.”</p>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
