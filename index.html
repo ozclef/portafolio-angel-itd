@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Escolar – Ángel I. Téllez</title>
+  <style>
+    :root {
+      --bg: #f5f8fa;
+      --card: #ffffff;
+      --text: #2c3e50;
+      --accent: #007bff;
+      --muted: #7f8c8d;
+      --radius: 14px;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 15px;
+      background: #e9f0f5;
+    }
+    nav a {
+      padding: 10px 14px;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: var(--card);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    }
+    .hidden { display: none; }
+    h2 { border-left: 6px solid var(--accent); padding-left: 10px; }
+    ul { line-height: 1.7; }
+    .placeholder-box {
+      border: 2px dashed #bdc3c7;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      color: var(--muted);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📂 Portafolio Escolar – Ángel I. Téllez</h1>
+    <p>Secundaria Técnica · Evidencias por Bimestre y Materia</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#b1">1er Bimestre</a>
+    <a href="#b2">2do Bimestre</a>
+    <a href="#b3">3er Bimestre</a>
+    <a href="#b4">4to Bimestre</a>
+    <a href="#b5">5to Bimestre</a>
+  </nav>
+
+  <div class="container" id="view-inicio">
+    <h2>Bienvenido 👋</h2>
+    <p>Este portafolio digital está organizado por bimestres y materias. Cada sección contiene las tareas, actividades, investigaciones e imágenes correspondientes.</p>
+
+    <div class="placeholder-box">
+      Aquí aparecerán automáticamente los avances que vayas agregando.<br>
+      Solo copia tus archivos dentro de cada carpeta y edita los HTML individuales.
+    </div>
+  </div>
+
+  <!-- Bimestre 1 -->
+  <div class="container hidden" id="view-b1">
+    <h2>📘 1er Bimestre</h2>
+
+    <h3>Materias disponibles:</h3>
+    <ul>
+      <li><a href="b1/historia.html">Historia</a></li>
+      <li><a href="b1/matematicas.html">Matemáticas</a></li>
+      <li><a href="b1/espanol.html">Español</a></li>
+      <li><a href="b1/ciencias.html">Ciencias</a></li>
+    </ul>
+  </div>
+
+  <!-- Bimestre 2 -->
+  <div class="container hidden" id="view-b2">
+    <h2>📗 2do Bimestre</h2>
+    <ul>
+      <li><a href="b2/historia.html">Historia</a></li>
+      <li><a href="b2/matematicas.html">Matemáticas</a></li>
+      <li><a href="b2/espanol.html">Español</a></li>
+      <li><a href="b2/ciencias.html">Ciencias</a></li>
+    </ul>
+  </div>
+
+  <!-- Bimestre 3 -->
+  <div class="container hidden" id="view-b3">
+    <h2>📙 3er Bimestre</h2>
+    <div class="placeholder-box">Aún no hay trabajos, pero esta sección ya está lista.</div>
+  </div>
+
+  <!-- Bimestre 4 -->
+  <div class="container hidden" id="view-b4">
+    <h2>📕 4to Bimestre</h2>
+    <div class="placeholder-box">Pendiente…</div>
+  </div>
+
+  <!-- Bimestre 5 -->
+  <div class="container hidden" id="view-b5">
+    <h2>📒 5to Bimestre</h2>
+    <div class="placeholder-box">Pendiente…</div>
+  </div>
+
+  <script>
+    function showView() {
+      let hash = location.hash.replace('#','') || 'inicio';
+      document.querySelectorAll('.container').forEach(c => c.classList.add('hidden'));
+      let view = document.getElementById('view-'+hash);
+      if (view) view.classList.remove('hidden');
+    }
+    window.addEventListener('hashchange', showView);
+    window.addEventListener('load', showView);
+  </script>
+</body>
+</html>
